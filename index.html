@@ -3,43 +3,300 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NovaTech 2026 Portfolio</title>
+    <title>Navnath Londhe - Site Reliability Engineer</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #0d1117;
-            color: #c9d1d9;
-            text-align: center;
-            padding: 50px 20px;
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent-color: #38bdf8;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: #334155;
+        }
+
+        * {
+            box-sizing: border-box;
             margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
         .container {
-            max-width: 600px;
+            max-width: 1000px;
             margin: 0 auto;
-            background: #161b22;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-            border: 1px solid #30363d;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2rem;
         }
-        h1 { color: #58a6ff; font-size: 2.5rem; margin-bottom: 10px; }
-        p { font-size: 1.2rem; color: #8b949e; line-height: 1.6; }
-        .tag {
-            background-color: #238636;
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .sidebar, .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: var(--text-main);
+            margin-bottom: 0.25rem;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .title {
+            color: var(--accent-color);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 0.5rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .contact-info a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background-color: var(--bg-color);
+            color: var(--accent-color);
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .timeline-item {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .job-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--text-main);
+        }
+
+        .company-date {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 1.2rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        li {
+            margin-bottom: 0.3rem;
+        }
+
+        .edu-item {
+            margin-bottom: 1rem;
+        }
+
+        .edu-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .degree {
+            font-weight: bold;
+            color: var(--text-main);
+        }
+
+        .institution {
             font-size: 0.9rem;
-            display: inline-block;
-            margin-top: 15px;
+            color: var(--text-muted);
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to My Profile</h1>
-        <p>DevOps Engineer | Open Source Contributor</p>
-        <div class="tag">NovaTech 2026 Platform</div>
-    </div>
+
+<div class="container">
+    <!-- Sidebar / Left Column -->
+    <aside class="sidebar">
+        <div class="card">
+            <h1>Navnath Londhe</h1>
+            <div class="title">Site Reliability Engineer</div>
+            
+            <div class="contact-info">
+                <p><strong>Experience:</strong> 8+ Years</p>
+                <p><strong>Location:</strong> Hyderabad, India</p>
+                <p><strong>Phone:</strong> (+91) 7387336471</p>
+                <p><strong>Email:</strong> <a href="mailto:londal.navnath@gmail.com">londal.navnath@gmail.com</a></p>
+                <p><strong>Website:</strong> <a href="https://www.novas.solutions" target="_blank">novas.solutions</a></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Key Skills</h2>
+            <div class="skills-list">
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">Kubernetes</span>
+                <span class="skill-tag">Jenkins</span>
+                <span class="skill-tag">Bash Scripting</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">CI/CD</span>
+                <span class="skill-tag">Linux</span>
+                <span class="skill-tag">AWS</span>
+                <span class="skill-tag">Azure</span>
+                <span class="skill-tag">Terraform</span>
+                <span class="skill-tag">GitLab</span>
+                <span class="skill-tag">Prometheus</span>
+                <span class="skill-tag">Grafana</span>
+                <span class="skill-tag">ELK Stack</span>
+                <span class="skill-tag">JFrog Artifactory</span>
+                <span class="skill-tag">Dynatrace</span>
+                <span class="skill-tag">ServiceNow</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Education</h2>
+            <div class="edu-item">
+                <div class="degree">PG Diploma (2015)</div>
+                <div class="institution">Centre for Development of Advanced Computing (CDAC)</div>
+            </div>
+            <div class="edu-item">
+                <div class="degree">B.Tech / B.E. (2014)</div>
+                <div class="institution">University of Mumbai, Mumbai</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Languages</h2>
+            <ul>
+                <li>English</li>
+                <li>Marathi</li>
+                <li>Hindi</li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- Main Content / Right Column -->
+    <main class="main-content">
+        <div class="card">
+            <h2>Profile Summary</h2>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">
+                A seasoned DevOps & Site Reliability Engineer with nearly 9 years of experience. Expert in automating software delivery via CI/CD pipelines (Jenkins, GitLab, Shell Scripting), managing cloud infrastructures with AWS, Azure, and Terraform, and orchestrating container workloads using Docker and Kubernetes. Highly proficient in Linux administration, incident response, production troubleshooting, and setting up centralized monitoring and logging systems.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Work Experience</h2>
+
+            <div class="timeline-item">
+                <div class="job-title">Site Reliability Engineer</div>
+                <div class="company-date">Angel One | Feb 2025 – Present</div>
+                <ul>
+                    <li>Manage AWS Cloud services including EC2, S3, RDS, ECS, EKS, CloudTrail, CloudWatch, SNS, ELB, Route53, and CertManager.</li>
+                    <li>Design and maintain CI/CD pipelines using Jenkins.</li>
+                    <li>Develop Shell and Python scripts for operational and infrastructure automation.</li>
+                    <li>Implement monitoring solutions with Prometheus, Grafana, and the ELK Stack for real-time observability.</li>
+                    <li>Troubleshoot and resolve production incidents aligned with strict MTTR, MTTD, and MTTE goals.</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <div class="job-title">Senior DevOps Engineer</div>
+                <div class="company-date">Kanerika Software | Oct 2024 – Feb 2025</div>
+                <ul>
+                    <li>Managed on-premise and cloud infrastructure alongside Linux server administration.</li>
+                    <li>Implemented Kubernetes for container orchestration and application deployments.</li>
+                    <li>Automated CI/CD workflows using Jenkins and authored infrastructure automation scripts in Python/Bash.</li>
+                    <li>Established centralized logging and monitoring infrastructure (Prometheus, Grafana, ELK).</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <div class="job-title">Team Lead</div>
+                <div class="company-date">Market Simplified | Mar 2024 – Oct 2024</div>
+                <ul>
+                    <li>Led infrastructure tasks managing on-premise environments and Linux administration.</li>
+                    <li>Orchestrated container deployments using Kubernetes and automated build/release processes with Jenkins.</li>
+                    <li>Delivered scalable infrastructure solutions for diverse client requirements.</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <div class="job-title">Senior Associate Consultant</div>
+                <div class="company-date">Kiya.ai | Oct 2021 – Mar 2024</div>
+                <ul>
+                    <li>Managed AWS and Azure resources (FunctionApp, Static Web App, AKS, Cosmos DB, VMs, Blob Storage).</li>
+                    <li>Provisioned infrastructure as code using Terraform and containerized monolithic applications into microservices on Kubernetes.</li>
+                    <li>Implemented code builds and deployments with GitLab CI.</li>
+                    <li>Designed highly available, fault-tolerant deployment architectures and automated system alerts.</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <div class="job-title">Software Engineer</div>
+                <div class="company-date">Cateina Technologies | Dec 2018 – Oct 2021</div>
+                <ul>
+                    <li>Handled AWS core services, server administration, and task automation with Ansible and Shell scripting.</li>
+                    <li>Containerized applications using Docker and Kubernetes; established CI/CD pipelines with Jenkins and JFrog Artifactory.</li>
+                    <li>Managed database backup and restoration routines (MySQL and Oracle-11g).</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <div class="job-title">Linux Administrator</div>
+                <div class="company-date">MindsArray Technologies | Nov 2016 – Dec 2018</div>
+                <ul>
+                    <li>Executed system administration tasks including OS installation, network configuration, and troubleshooting.</li>
+                    <li>Automated repetitive system tasks using Shell scripting.</li>
+                    <li>Managed internal IT infrastructure, asset tracking, and documentation.</li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+</div>
+
 </body>
 </html>
